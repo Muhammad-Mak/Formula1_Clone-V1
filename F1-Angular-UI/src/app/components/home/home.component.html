@@ -1,0 +1,35 @@
+<!-- <div class="discussion-board">
+  <h2>Discussion Board</h2>
+
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <textarea formControlName="postDetails" placeholder="Write your opinion..." rows="4"></textarea>
+    <button type="submit" [disabled]="!postForm.valid">Post</button>
+  </form>
+
+  <div class="posts-list">
+    <div *ngFor="let post of posts" class="post">
+      <p><strong>{{ post.username }}</strong>
+      <p>{{ post.dateTime | date:'short'}}</p>
+      <pre>{{ post.postDetails }}</pre>
+    </div>
+  </div>
+</div> -->
+
+<div class="discussion-board">
+  <h2>Discussion Board</h2>
+
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="post-form">
+    <textarea formControlName="postDetails" placeholder="Write your opinion..." rows="4" aria-label="Write your opinion"></textarea>
+    <button type="submit" [disabled]="!postForm.valid">Post</button>
+  </form>
+
+  <div class="posts-list">
+    <div *ngFor="let post of posts" class="post-card">
+      <div class="post-header">
+        <p class="post-username"><strong>{{ post.username }}</strong></p>
+        <p class="post-date">{{ post.dateTime | date:'short' }}</p>
+      </div>
+      <pre class="post-content">{{ post.postDetails }}</pre>
+    </div>
+  </div>
+</div>

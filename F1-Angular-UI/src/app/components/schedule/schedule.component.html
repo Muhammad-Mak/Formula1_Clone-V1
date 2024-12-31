@@ -1,0 +1,21 @@
+<div class="schedules-wrapper">
+    <div class="schedules-container">
+        <div class="schedules-card" *ngFor="let schedule of schedules" (click)="selectSchedule(schedule)">
+            <img class="schedule-image" [src]="schedule.race_Image" alt="{{ schedule.location }}">
+            <div class="schedule-info">
+                <h3>{{ schedule.raceDate }}</h3>
+                <p>Location: {{ schedule.location }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedSchedule" class="schedule-details">
+    <div class="details-header">
+        <h2>{{ selectedSchedule.location }}</h2>
+    </div>
+    <img class="details-image" [src]="selectedSchedule.race_Image" alt="{{ selectedSchedule.location }}">
+    <p>Date: {{ selectedSchedule.raceDate }}</p>
+    Track Details: <pre style="text-wrap: wrap;">{{ selectedSchedule.details }}</pre>
+</div>
+<div id="bottom"></div>

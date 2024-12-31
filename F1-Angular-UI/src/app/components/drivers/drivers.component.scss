@@ -1,0 +1,89 @@
+.drivers-wrapper{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.drivers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+  max-width: 1200px;
+}
+
+.driver-card {
+  flex: 0 1 calc(33.333% - 20px);
+  padding: 10px;
+  margin: 10px 0s;
+  border: 1px solid #e10600;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.driver-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.driver-image {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.driver-info h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.driver-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.driver-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #e10600;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-header h2 {
+  margin: 0;
+}
+
+.details-header button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-header button:hover {
+  background-color: #0056b3;
+}
+
+.details-image {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 8px;
+}

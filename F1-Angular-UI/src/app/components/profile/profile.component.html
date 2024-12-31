@@ -1,0 +1,53 @@
+<div class="admin-form-container">
+    <form [formGroup]="driverForm" (ngSubmit)="onUpdateDriver()">
+
+        <div class="form-group">
+            <h3>Update Driver</h3>
+            <label for="driverNumber">Driver Number:</label>
+            <input type="text" id="driverNumber" formControlName="driverNumber" required>
+            <label for="driverPoints">Driver Points:</label>
+            <input type="text" id="driverPoints" formControlName="driverPoints" required>
+            <label for="driverPosition">Driver Position:</label>
+            <input type="text" id="driverPosition" formControlName="driverPosition" required>
+            <div class="form-buttons">
+                <button type="submit" [disabled]="!driverForm.valid">Update Driver</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="admin-form-container">
+    <form [formGroup]="teamForm" (ngSubmit)="onUpdateTeam()">
+        <div class="form-group">
+            <h3>Update Team</h3>
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName" formControlName="teamName" required>
+            <label for="teamPoints">Team Points:</label>
+            <input type="text" id="teamPoints" formControlName="teamPoints" required>
+            <label for="teamPosition">Team Position:</label>
+            <input type="text" id="teamPosition" formControlName="teamPosition" required>
+
+            <div class="form-buttons">
+                <button type="submit" [disabled]="!teamForm.valid">Update Team</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="admin-form-container">
+    <form [formGroup]="raceForm" (ngSubmit)="onUpdateRace()">
+
+        <div class="form-group">
+            <h3>Update/Delete Race</h3>
+            <label for="location">Race Location:</label>
+            <input type="text" id="location" formControlName="location" required>
+            <label for="raceDate">Race Date:</label>
+            <input type="text" id="raceDate" formControlName="raceDate">
+
+
+            <div class="form-buttons">
+                <button type="submit" [disabled]="!raceForm.valid">Update Race</button>
+                <button type="button" (click)="onDeleteRace()">Delete Race</button>
+            </div>
+        </div>
+    </form>
+</div>

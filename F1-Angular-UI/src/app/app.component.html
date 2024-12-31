@@ -1,0 +1,16 @@
+<div class="title-bar">
+    <div><img src="/f1logo.png" height="50px" width="150px"></div>
+    <div>
+        <ul class="nav-links">
+            <li><a routerLink="home">Home</a></li>
+            <li><a routerLink="schedule">Schedule</a></li>
+            <li><a routerLink="drivers">Drivers</a></li>
+            <li><a routerLink="teams">Teams</a></li>
+            <li><a *ngIf="admin" routerLink="profile">Edit</a></li>
+            <div class="form-buttons">
+                <li><button *ngIf="isLoggedIn" (click)="onLogout()" type="submit">LogOut</button></li>
+            </div>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>

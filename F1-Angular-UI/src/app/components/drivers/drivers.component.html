@@ -1,0 +1,27 @@
+<div class="drivers-wrapper">
+  <div class="drivers-container">
+    <div class="driver-card" *ngFor="let driver of drivers" (click)="selectDriver(driver)">
+      <img class="driver-image" [src]="driver.driver_Image" alt="{{ driver.driverName }}">
+      <div class="driver-info">
+        <h3>{{ driver.driverName }}</h3>
+        <p>Team: {{ driver.teamName }}</p>
+        <p>Points: {{ driver.driverPoints }}</p>
+        <p>Championship Standings: {{ driver.driverPosition }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bottom"></div>
+<div *ngIf="selectedDriver" class="driver-details">
+  <div class="details-header">
+    <h2>{{ selectedDriver.driverName }}</h2>
+  </div>
+  <img class="details-image" [src]="selectedDriver.driver_Image" alt="{{ selectedDriver.driverName }}">
+  <p>Driver Number: {{ selectedDriver.driverNumber }} </p>
+  <p>Team: {{ selectedDriver.teamName }}</p>
+  <p>Points: {{ selectedDriver.driverPoints }}</p>
+  <p>Championship Standings: {{ selectedDriver.driverPosition }}</p>
+  Additional Info:
+  <pre style="text-wrap: wrap;"> {{ selectedDriver.driverDetails }}</pre>
+</div>

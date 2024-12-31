@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AngularF1APIv2.props" />
+</Project>

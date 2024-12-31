@@ -1,0 +1,26 @@
+<div class="teams-wrapper">
+  <div class="teams-container">
+    <div class="teams-card" *ngFor="let team of teams" (click)="selectTeam(team)">
+      <img class="team-image" [src]="team.car_Image" alt="{{ team.teamName }}">
+      <div class="team-info">
+        <h3>{{ team.teamName }}</h3>
+        <p>Drivers: {{ team.teamDrivers }}</p>
+        <p>Points: {{ team.teamPoints }}</p>
+        <p>Championship Standings: {{ team.teamPosition }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedTeam" class="team-details">
+  <div class="details-header">
+    <h2>{{ selectedTeam.teamName }}</h2>
+  </div>
+  <img class="details-image" [src]="selectedTeam.car_Image" alt="{{ selectedTeam.teamName }}">
+  <p>Drivers: {{ selectedTeam.teamDrivers }}</p>
+  <p>Points: {{ selectedTeam.teamPoints }}</p>
+  <p>Championship Standings: {{ selectedTeam.teamPosition }}</p>
+  Additional Info:
+  <pre style="text-wrap: wrap;">{{ selectedTeam.teamDetails }}</pre>
+</div>
+<div id="bottom"></div>
